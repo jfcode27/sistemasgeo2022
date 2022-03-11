@@ -4,35 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Práctica 4</title>
-
+    <title>Practica 4</title>
   </head>
   <body>
-
-    <button onclick="obtieneUbicación()">Obtener ubicación</button>
-
+    <button onclick="obtieneUbicacion()">Obtener ubicación</button>
     <div id="mapa">
-      <img id="imagenMapa" src="" alt="Imagen de Mapa">
+      <img id="imagenmapa" src="" alt="Imagen de mapa" />
     </div>
-
     <script>
-        var mapa = document.getElementById("mapa");
-
-        function obtieneUbicación() {
-        if(navigator.geolocation){
-            navigator.geolocation.getCurrentPosition(muestraPosicion);
-
+      var mapa = document.getElementById("mapa");
+      function obtieneUbicacion() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(muestraPosicion);
         }
-    }
+      }
+      function muestraPosicion(posicion) {
+        var coordenadas =
+          posicion.coords.latitude + "," + posicion.coords.longitude;
 
-    function muestraPosicion(position){
-        var coordenadas = position.coords.lattitude + "," + position.coords.longitude;
+        var imagenmapa = document.getElementById("imagenmapa");
 
-        var imagenMapa = document.getElementById("imagenMapa");
-
-        imagenMapa.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + coordenadas + "&zoom=18&size=800x800&key=AIzaSyCMrQgga-C5zCuZLTVk2MPVzX7naqKZXZU";
-    }
-
+        imagenmapa.src =
+          "https://maps.googleapis.com/maps/api/staticmap?center=" +
+          coordenadas +
+          "&zoom=12&size=400x400&key=AIzaSyCMrQgga-C5zCuZLTVk2MPVzX7naqKZXZU";
+      }
     </script>
   </body>
 </html>
