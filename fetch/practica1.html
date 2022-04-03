@@ -5,26 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Práctica 1 Fetch</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="paises"></div>
 
     <script>
-
-      var paises = document.getElementById("paises");
-
+      var pais = document.getElementById("paises");
       fetch("datos.json")
-      .then( function(response){
-
-          console.log(response);
-          response.json().then(function(datos){
-              datos.forEach(registro => {
-                  let nombre = document.createElement("p");
-                  nombre.textContent = "País: " + registro.country + ", casos: " + registro.cases;
-                  paises.appendChild(nombre);
-              });
+        .then((response) => response.json())
+        .then((datos) => {
+          datos.forEach((registro) => {
+            pais.innerHTML += `<div class="card-wrap">
+        <div class="country-image">
+          <img src="${registro.image}" alt="">
+        </div>
+        <div class="info">
+          <h2>${registro.country}</h2>
+          <p>Casos: ${registro.cases}</p>
+        </div>
+      </div>`;
           });
-      });
+        });
     </script>
   </body>
 </html>

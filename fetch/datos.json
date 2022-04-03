@@ -1,10 +1,13 @@
 [{
 	"country": "Mexico",
-	"cases": 203
+	"cases": 203,
+	"image": "https://cdn.britannica.com/73/2573-004-29818847/Flag-Mexico.jpg"
 }, {
 	"country": "Panama",
-	"cases": 200
+	"cases": 200,
+	"image":"https://cdn.britannica.com/22/7222-004-D49C5703/Flag-Panama.jpg"
 }, {
 	"country": "Colombia",
-	"cases": 196
+	"cases": 196,
+	"image":"https://cdn.britannica.com/68/7668-004-08492AB7/Flag-Colombia.jpg"
 }]
