@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Práctica 7</title>
+    <title>Práctica Marker Clustering</title>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -14,11 +14,16 @@
       body {
         margin: 0px;
         padding: 0px;
+        background-color: #262525;
       }
 
       #mapa {
         width: 100%;
-        height: 500px;
+        height: 800px;
+      }
+
+      .header{
+          color: aliceblue;
       }
     </style>
   </head>
@@ -27,22 +32,22 @@
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
-            <h1>Google Maps Clustering</h1>
+            <h1 class="header">Práctica Marker Clustering</h1>
             <div id="mapa"></div>
           </div>
         </div>
         <div class="row p-2">
           <div class="col-3 text-center">
-            <button class="btn btn-primary" id="btnroadmap">roadmap</button>
+            <button class="btn btn-primary" id="btnroadmap">Mapa</button>
           </div>
           <div class="col-3 text-center">
-            <button class="btn btn-warning" id="btnsatellite">satellite</button>
+            <button class="btn btn-warning" id="btnsatellite">Satélite/button>
           </div>
           <div class="col-3 text-center">
-            <button class="btn btn-danger" id="btnhybrid">hybrid</button>
+            <button class="btn btn-danger" id="btnhybrid">Híbrido</button>
           </div>
           <div class="col-3 text-center">
-            <button class="btn btn-success" id="btnterrain">terrain</button>
+            <button class="btn btn-success" id="btnterrain">Relieve</button>
           </div>
         </div>
       </div>
