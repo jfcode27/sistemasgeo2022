@@ -1,0 +1,54 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-image: url("./assets/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.play-button{
+    cursor: pointer;
+    color: #fff;
+    background-color: orange;
+    position: absolute;
+    border-radius: 20px;
+    width: 100px;
+    text-align: center;
+    top: 0;
+    right: 0;
+    margin: 30px;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.lista{
+    list-style: none;
+}
+
+.lista li{
+margin: 30px;
+display: flex;
+}
+
+.lista a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 106, 7);
+}
+
+.db img{
+    width: 40px;
+}
